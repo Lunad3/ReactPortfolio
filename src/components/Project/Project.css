@@ -1,7 +1,7 @@
-.Project .parallax-container {
-  height: 300px;
+.Project{
+  margin: 20px 0px;
 }
 
-.Project .Section{
-  height: 600px;
+.Project .fa-github{
+  font-size: 20px;
 }

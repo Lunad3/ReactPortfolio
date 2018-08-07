@@ -1,25 +1,25 @@
 import React, { Component } from "react";
 
-import { Parallax } from "react-materialize";
+import { Card, CardTitle, Icon } from "react-materialize";
 
 import "./Project.css";
 
 class Project extends Component {
   render() {
     return (
-      <div className="Project">
-
-        <Parallax imageSrc={this.props.thumbnail}/>
-        <div className="section white">
-          <h2 className="header">TITLE</h2>
-          <p className="grey-text text-darken-3 lighten-3">SUMMARY</p>
-          <p className="grey-text text-darken-3 lighten-3">SUMMARY</p>
-          <p className="grey-text text-darken-3 lighten-3">SUMMARY</p>
-          <p className="grey-text text-darken-3 lighten-3">SUMMARY</p>
-          <p className="grey-text text-darken-3 lighten-3">SUMMARY</p>
-          <p className="grey-text text-darken-3 lighten-3">SUMMARY</p>
-        </div>
-      </div>
+      <Card horizontal 
+        className="Project"
+        header={<CardTitle image={this.props.thumbnail}/>}
+        actions={[
+          <a href={this.props.gitHubRepoLink}><i className="fab fa-github"/> github-repo</a>,
+          <a href={this.props.websiteLink}><Icon>link</Icon>Website</a>
+        ]}
+      >
+        <h4>{this.props.title}</h4>
+        <p>
+          {this.props.summary}
+        </p>
+      </Card>
     );
   };
 };

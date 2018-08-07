@@ -6,7 +6,7 @@ class Footer extends Component {
 
   render() {
     return (
-      <MFooter copyrights="&copy 2018. All rights reserved">
+      <MFooter className="myFooter" copyrights="&copy 2018. All rights reserved">
         <h5>THIS IS THE FOOTER COMPONENT</h5>
       </MFooter>
     );

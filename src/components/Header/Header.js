@@ -8,7 +8,7 @@ class Header extends Component {
 
   render() {
     return (
-      <Navbar brand='Daniel Luna' right>
+      <Navbar className="myHeader" brand='Daniel Luna' right>
         <NavItem href="/projects">Projects</NavItem>
         <NavItem href='/contact'>Contact</NavItem>
       </Navbar>
