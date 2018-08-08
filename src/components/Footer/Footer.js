@@ -5,10 +5,18 @@ import "./Footer.css";
 class Footer extends Component {
 
   render() {
+
     return (
-      <MFooter className="myFooter" copyrights="&copy 2018. All rights reserved">
-        <h5>THIS IS THE FOOTER COMPONENT</h5>
-      </MFooter>
+      <div className="Footer">
+        <hr/>
+        <ol>
+          <li>© 2018. All rights reserved</li>
+          <li><a href="https://github.com/Lunad3"><i className="fab fa-github"/> MyGitHub</a></li>
+          <li><a href="https://www.linkedin.com/in/lunad3/"><i className="fab fa-linkedin"/> MyLinkedIn</a></li>
+          <li>cell:(408)-816-0227</li>
+          <li>email: 123.daniel.luna@gmail.com</li>
+        </ol>
+      </div>
     );
   };
 };

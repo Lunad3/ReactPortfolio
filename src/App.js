@@ -30,25 +30,27 @@ class App extends Component {
         <div className="sideSpace col s1"></div>
         <div className="col s10">
           <Header/>
-          <Router>
-            <Switch>
-              <Route
-                exact path="/"
-                render={()=><AboutMePage/>}
-              />
-              <Route
-                exact path="/projects"
-                render={()=><ProjectsPage/>}
-              />
-              <Route
-                exact path="/contact"
-                render={()=><ContactPage/>}
-              />
-              <Route 
-                render={()=><NoMatchPage/>}
-              />
-            </Switch>
-          </Router>
+          <div className="content">
+            <Router>
+              <Switch>
+                <Route
+                  exact path="/"
+                  render={()=><AboutMePage/>}
+                />
+                <Route
+                  exact path="/projects"
+                  render={()=><ProjectsPage/>}
+                />
+                <Route
+                  exact path="/contact"
+                  render={()=><ContactPage/>}
+                />
+                <Route 
+                  render={()=><NoMatchPage/>}
+                />
+              </Switch>
+            </Router>
+          </div>
           <Footer/>
         </div>
         <div className="sideSpace col s1"></div>
