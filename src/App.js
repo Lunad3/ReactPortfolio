@@ -24,24 +24,48 @@ import "./App.css";
 
 class App extends Component {
 
+  constructor(){
+    super();
+    this.state = {
+      width:window.innerWidth
+    };
+    this.updateWidth = this.updateWidth.bind(this);
+  };
+
+  componentDidMount(){
+    window.addEventListener("resize",this.updateWidth);
+  };
+
+  updateWidth(){
+    console.log(window.innerWidth);
+    this.setState({width:window.innerWidth});
+  };
+
   render() {
+
+    const isMobileVal = (this.state.width <= 992);
+
     return (
-      <div className="Page">
+      <div  className="Page">
           <Header/>
           <div className="content">
             <Router>
               <Switch>
                 <Route
                   exact path="/"
-                  render={()=><AboutMePage/>}
+                  render={()=><AboutMePage
+                  />}
                 />
                 <Route
                   exact path="/projects"
-                  render={()=><ProjectsPage/>}
+                  render={()=><ProjectsPage
+                    isMobile={isMobileVal}
+                  />}
                 />
                 <Route
                   exact path="/contact"
-                  render={()=><ContactPage/>}
+                  render={()=><ContactPage
+                  />}
                 />
                 <Route 
                   render={()=><NoMatchPage/>}

@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import {Footer as MFooter} from "react-materialize";
 import "./Footer.css";
 
 class Footer extends Component {
