@@ -26,9 +26,7 @@ class App extends Component {
 
   render() {
     return (
-      <div className="Page row">
-        <div className="sideSpace col s1"></div>
-        <div className="col s10">
+      <div className="Page">
           <Header/>
           <div className="content">
             <Router>
@@ -50,10 +48,8 @@ class App extends Component {
                 />
               </Switch>
             </Router>
+            <Footer/>
           </div>
-          <Footer/>
-        </div>
-        <div className="sideSpace col s1"></div>
       </div>
     );
   };
